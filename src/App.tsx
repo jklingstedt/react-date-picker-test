@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { DateRangePicker, RangeKeyDict } from 'react-date-range'
-import { es } from 'date-fns/locale'
+import { enUS } from 'date-fns/locale'
 
 import 'react-date-range/dist/styles.css' // main style file
 import 'react-date-range/dist/theme/default.css' // theme css file
@@ -34,7 +34,7 @@ export const App = () => {
         <StyledWrapper>
             <h1>React Date Range</h1>
             <DateRangePicker
-                locale={es}
+                locale={enUS}
                 months={2}
                 ranges={[selectionRange]}
                 onChange={handleSelect}
@@ -42,6 +42,7 @@ export const App = () => {
                 rangeColors={['#007C92']}
                 editableDateInputs={true}
                 dateDisplayFormat="M/d/yyyy"
+                direction="horizontal"
             />
         </StyledWrapper>
     )
